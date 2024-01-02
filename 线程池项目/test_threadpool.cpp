@@ -7,18 +7,6 @@
 using namespace std;
 
 #include "threadpool.h"
-
-/*
-有些场景，是希望能够获取线程执行任务得返回值得
-举例：
-1 + 。。。 + 30000的和
-thread1  1 + ... + 10000
-thread2  10001 + ... + 20000
-.....
-
-main thread：给每一个线程分配计算的区间，并等待他们算完返回结果，合并最终的结果即可
-*/
-
 using uLong = unsigned long long;
 
 class MyTask : public Task
